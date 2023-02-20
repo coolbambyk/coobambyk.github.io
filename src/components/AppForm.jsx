@@ -83,7 +83,7 @@ const AppForm = () => {
                       required
                       name="stickerPrice"
                       component={TextField}
-                      type="text"
+                      type="number"
                       initialValue={""}
                       label="Sticker Price"
                       InputLabelProps={{
@@ -99,7 +99,7 @@ const AppForm = () => {
                       required
                       name="onlinePrice"
                       component={TextField}
-                      type="text"
+                      type="number"
                       label="Online Price"
                       InputLabelProps={{
                         shrink: true,
@@ -115,7 +115,7 @@ const AppForm = () => {
                       fullWidth
                       required
                       component={TextField}
-                      type="text"
+                      type="number"
                       label="Wholesale Price"
                       InputLabelProps={{
                         shrink: true,
@@ -131,7 +131,7 @@ const AppForm = () => {
                       fullWidth
                       required
                       component={TextField}
-                      type="text"
+                      type="number"
                       label="Required Down"
                       InputLabelProps={{
                         shrink: true,
