@@ -23,17 +23,27 @@ const AppForm = () => {
   };
   const validate = (values) => {
     const errors = {};
-    if (values.stickerPrice === ' ') {
-      errors.stickerPrice = 'Sticker Price Required';
+    if (Object.keys(errors).length === 0) {
+      setDisableButton(false);
     }
-    if (values.onlinePrice === ' ') {
-      errors.onlinePrice = 'Online Price Required';
+    Object.values(values).forEach((value) => {
+      value ? setDisableButton(false) : setDisableButton(true);
+    });
+    if (values.stickerPrice === " ") {
+      errors.stickerPrice = "Sticker Price Required";
+      setDisableButton(true);
     }
-    if (values.wholesalePrice === ' ') {
-      errors.wholesalePrice = 'Wholesale Price Required';
+    if (values.onlinePrice === " ") {
+      errors.onlinePrice = "Online Price Required";
+      setDisableButton(true);
     }
-    if (values.requiredDown === ' ') {
-      errors.requiredDown = 'Required Down Required';
+    if (values.wholesalePrice === " ") {
+      errors.wholesalePrice = "Wholesale Price Required";
+      setDisableButton(true);
+    }
+    if (values.requiredDown === " ") {
+      errors.requiredDown = "Required Down Required";
+      setDisableButton(true);
     }
     if (
       values.stickerPrice &&
@@ -42,11 +52,9 @@ const AppForm = () => {
         ParseForCompare(values.wholesalePrice)
     ) {
       errors.stickerPrice =
-        'Wholesale price should be more than the sticker price';
+        "Wholesale price should be more than the sticker price";
+        setDisableButton(true);
     }
-    Object.keys(errors).length === 0
-      ? setDisableButton(true)
-      : setDisableButton(false);
     return errors;
   };
   return (
