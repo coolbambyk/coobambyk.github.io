@@ -2,7 +2,7 @@
   "name": "react-test-form",
   "version": "1.0.0",
   "description": "React, MUI, final-forms form",
-  "homepage": "https://coolbambyk.github.io",
+  "homepage": "https://coolbambyk.github.io/test-final-form/",
   "main": "src/index.js",
   "dependencies": {
     "final-form": "latest",

@@ -1,19 +1,8 @@
-import React, { useState } from 'react';
-import { Form, Field } from 'react-final-form';
-import { TextField, Select } from 'final-form-material-ui';
-import {
-  Typography,
-  Paper,
-  Link,
-  Grid,
-  Button,
-  FormLabel,
-  MenuItem,
-  FormGroup,
-  FormControl,
-  FormControlLabel,
-} from '@material-ui/core';
-import { FormatNumbers, ParseForCompare } from '../utils/FormatNumbers';
+import React, { useState } from "react";
+import { Form, Field } from "react-final-form";
+import { TextField, Select } from "final-form-material-ui";
+import { Typography, Paper, Grid, Button, MenuItem } from "@material-ui/core";
+import { FormatNumbers, ParseForCompare } from "../utils/FormatNumbers";
 
 const AppForm = () => {
   const [disableButton, setDisableButton] = useState(true);
@@ -53,12 +42,12 @@ const AppForm = () => {
     ) {
       errors.stickerPrice =
         "Wholesale price should be more than the sticker price";
-        setDisableButton(true);
+      setDisableButton(true);
     }
     return errors;
   };
   return (
-    <div style={{ padding: 16, margin: 'auto', maxWidth: 600 }}>
+    <div style={{ padding: 16, margin: "auto", maxWidth: 600 }}>
       <Form
         onSubmit={onSubmit}
         validate={validate}
@@ -82,7 +71,7 @@ const AppForm = () => {
                       component={Select}
                       label="Auto Markup?"
                       formControlProps={{ fullWidth: true }}
-                      initialValue={'No'}
+                      initialValue={"No"}
                     >
                       <MenuItem value="No">No</MenuItem>
                       <MenuItem value="Yes">Yes</MenuItem>
@@ -95,7 +84,7 @@ const AppForm = () => {
                       name="stickerPrice"
                       component={TextField}
                       type="text"
-                      initialValue={''}
+                      initialValue={""}
                       label="Sticker Price"
                       InputLabelProps={{
                         shrink: true,
@@ -117,7 +106,7 @@ const AppForm = () => {
                       }}
                       format={FormatNumbers}
                       formatOnBlur
-                      initialValue={''}
+                      initialValue={""}
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -133,7 +122,7 @@ const AppForm = () => {
                       }}
                       format={FormatNumbers}
                       formatOnBlur
-                      initialValue={''}
+                      initialValue={""}
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -149,12 +138,12 @@ const AppForm = () => {
                       }}
                       format={FormatNumbers}
                       formatOnBlur
-                      initialValue={''}
+                      initialValue={""}
                     />
                   </Grid>
                 </Grid>
               </Paper>
-              <Grid item style={{ marginTop: 30, textAlign: 'right' }}>
+              <Grid item style={{ marginTop: 30, textAlign: "right" }}>
                 <Button
                   variant="contained"
                   color="primary"
