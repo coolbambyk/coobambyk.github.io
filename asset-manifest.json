@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/static/js/main.ee102a45.js",
-    "index.html": "/index.html",
-    "main.ee102a45.js.map": "/static/js/main.ee102a45.js.map"
+    "main.js": "/test-final-form/static/js/main.ee102a45.js",
+    "index.html": "/test-final-form/index.html",
+    "main.ee102a45.js.map": "/test-final-form/static/js/main.ee102a45.js.map"
   },
   "entrypoints": [
     "static/js/main.ee102a45.js"
